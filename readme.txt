@@ -41,3 +41,5 @@ POST - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/create-suscrip
 GET - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/read-suscriptores
 PUT - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/update-suscriptor
 DELETE - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/delete-suscriptor
+
+# Archivo de configuracion de prueba para endpoints de postman dentro del repositorio #
