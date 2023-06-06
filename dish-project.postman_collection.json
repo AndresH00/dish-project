@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "a53d0fc2-23fe-4a1c-b3bd-ab783255a88c",
+		"name": "dish-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24636652"
+	},
+	"item": [
+		{
+			"name": "delete-suscriptor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"suscriptor\":{\r\n      \"telefono_celular\":\"5555555555\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/delete-suscriptor",
+					"protocol": "https",
+					"host": [
+						"7bqlaxos1d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"delete-suscriptor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-suscriptor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"suscriptor\":{\r\n      \"info_nombre\":{\r\n         \"nombre\":\"Raul\",\r\n         \"apellido_materno\":\"Garcia\",\r\n         \"apellido_paterno\":\"Lopez\"\r\n      },\r\n      \"edad\":25,\r\n      \"telefono_celular\":\"5555555555\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/update-suscriptor",
+					"protocol": "https",
+					"host": [
+						"7bqlaxos1d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"update-suscriptor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read-suscriptor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/read-suscriptores",
+					"protocol": "https",
+					"host": [
+						"7bqlaxos1d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"read-suscriptores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-suscriptor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"suscriptor\":{\r\n      \"info_nombre\":{\r\n         \"nombre\":\"Juan\",\r\n         \"apellido_materno\":\"Garcia\",\r\n         \"apellido_paterno\":\"Lopez\"\r\n      },\r\n      \"edad\":25,\r\n      \"telefono_celular\":\"5555555555\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/create-suscriptor",
+					"protocol": "https",
+					"host": [
+						"7bqlaxos1d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"create-suscriptor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

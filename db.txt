@@ -1,0 +1,11 @@
+CREATE DATABASE dish_db;
+
+USE dish_db;
+
+CREATE TABLE suscriptores (
+    telefono_celular VARCHAR(10) PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    apellido_materno VARCHAR(255) DEFAULT '',
+    apellido_paterno VARCHAR(255) DEFAULT '',
+    edad INT NOT NULL
+);

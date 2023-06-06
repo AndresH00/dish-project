@@ -1,0 +1,69 @@
+service: my-serverless-app
+provider:
+  name: aws
+  runtime: python3.9
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - lambda:InvokeFunction
+        - rds-db:connect
+        - secretsmanager:GetSecretValue
+      Resource: "*"
+
+custom:
+  customEnvVars: &customEnvVars
+    SECRET_ARN: arn:aws:secretsmanager:us-east-1:537246779433:secret:dish_ps-LxB5Md
+    DB_DATABASE: dish_db
+  pythonRequirements:
+    dockerizePip: true
+
+
+plugins:
+  - serverless-plugin-include-dependencies
+  - serverless-python-requirements
+
+functions:
+  createSuscriptor:
+    handler: create_suscriptor.lambda_handler
+    runtime: python3.9
+    events:
+      - http:
+          path: create-suscriptor
+          method: post
+          cors: true
+    environment:
+      <<: *customEnvVars
+
+  readSuscriptores:
+    handler: read_suscriptores.lambda_handler
+    runtime: python3.9
+    events:
+      - http:
+          path: read-suscriptores
+          method: get
+          cors: true
+    environment:
+      <<: *customEnvVars
+
+  updateSuscriptor:
+    handler: update_suscriptor.lambda_handler
+    runtime: python3.9
+    events:
+      - http:
+          path: update-suscriptor
+          method: put
+          cors: true
+    environment:
+      <<: *customEnvVars
+
+  deleteSuscriptor:
+    handler: delete_suscriptor.lambda_handler
+    runtime: python3.9
+    events:
+      - http:
+          path: delete-suscriptor
+          method: delete
+          cors: true
+    environment:
+      <<: *customEnvVars

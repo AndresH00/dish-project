@@ -1,0 +1,15 @@
+{
+  "name": "dish_project",
+  "version": "1.0.0",
+  "description": "- Tener base de datos mysql\r - Tener layer de mysql para python\r - Tener secreto de la base de datos con la contrasenia en la cuenta\r - Tener instalado serverless\r - Tener instalado aws cli\r - Tener setiadas las credenciales de aws",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serverless-plugin-include-dependencies": "^5.1.0",
+    "serverless-python-requirements": "^6.0.0"
+  }
+}
