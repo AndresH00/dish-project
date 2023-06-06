@@ -39,6 +39,10 @@ def lambda_handler(event, context):
     """
     print(event)
     secret_arn = os.environ['SECRET_ARN']
+    body = event['queryStringParameters'] if event['queryStringParameters'] is not None else None
+    print(body)
+    print(type(body))
+    telefono_celular = body['telefono_celular'] if isinstance(body, dict) and 'telefono_celular' in body else None
 
     try:
         # Retrieve the password from the secret
@@ -52,9 +56,13 @@ def lambda_handler(event, context):
         cursor = conn.cursor()
 
         # Execute the SQL query to retrieve all suscriptor records
-        sql = "SELECT * FROM suscriptores"
-        cursor.execute(sql)
-
+        if telefono_celular == None:
+            sql = "SELECT * FROM suscriptores"
+            cursor.execute(sql)
+        else:
+            sql = "SELECT * FROM suscriptores WHERE telefono_celular = %s"
+            values = (telefono_celular,)
+            cursor.execute(sql, values)
         # Fetch all rows from the result set
         rows = cursor.fetchall()
         # Format the result as a list of dictionaries

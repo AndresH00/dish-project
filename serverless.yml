@@ -46,6 +46,17 @@ functions:
     environment:
       <<: *customEnvVars
 
+  readSuscriptor:
+    handler: read_suscriptores.lambda_handler
+    runtime: python3.9
+    events:
+      - http:
+          path: read-suscriptores/{telefono_celular}
+          method: get
+          cors: true
+    environment:
+      <<: *customEnvVars
+
   updateSuscriptor:
     handler: update_suscriptor.lambda_handler
     runtime: python3.9

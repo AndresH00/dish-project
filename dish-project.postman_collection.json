@@ -71,29 +71,6 @@
 			"response": []
 		},
 		{
-			"name": "read-suscriptor",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/read-suscriptores",
-					"protocol": "https",
-					"host": [
-						"7bqlaxos1d",
-						"execute-api",
-						"us-east-1",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"dev",
-						"read-suscriptores"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "create-suscriptor",
 			"request": {
 				"method": "POST",
@@ -120,6 +97,59 @@
 					"path": [
 						"dev",
 						"create-suscriptor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read-suscriptores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/read-suscriptores",
+					"protocol": "https",
+					"host": [
+						"7bqlaxos1d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"read-suscriptores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read-suscriptor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"suscriptor\":{\r\n      \"telefono_celular\":\"5555555555\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/read-suscriptores",
+					"protocol": "https",
+					"host": [
+						"7bqlaxos1d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"read-suscriptores"
 					]
 				}
 			},

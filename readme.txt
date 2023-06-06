@@ -39,7 +39,8 @@ Para probar lambdas en especifico:
 # Endpoints de dev funcionales de 06/06/2023 seran terminados el dia 07/06/2023
 POST - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/create-suscriptor
 GET - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/read-suscriptores
+GET - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/read-suscriptores/?telefono_celular={telefono_celular}
 PUT - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/update-suscriptor
 DELETE - https://7bqlaxos1d.execute-api.us-east-1.amazonaws.com/dev/delete-suscriptor
 
-# Archivo de configuracion de prueba para endpoints de postman dentro del repositorio #
+### Archivo de configuracion de prueba para endpoints de postman dentro del repositorio ###
